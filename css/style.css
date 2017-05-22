@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #455A64;
+    font-family: 'Open Sans', sans-serif;
+}
+
+accordion {
+    float: left;
+    width: 100%;
+}
+
+accordion h2 {
+    background: #009688 none repeat scroll 0 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+}
+
+accordion p {
+    border: 1px solid #ddd;
+    margin: 0;
+    border-top: none;
+    padding: 10px;
+    font-size: 16px;
+    background: #fff;
+}
