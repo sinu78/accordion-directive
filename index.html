@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript">
+        app.controller('myController', function ($scope) {
+            $scope.data = [{title: 'Title 1', content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'},
+                {title: 'Title 2', content: 'dsfsfsfsdfsdfsdf'},
+                {title: 'Title 3', content: 'dsfsfsfsdfsdfsdf'},
+                {title: 'Title 4', content: 'dsfsfsfsdfsdfsdf'},
+                {title: 'Title 5', content: 'dsfsfsfsdfsdfsdf'}]
+        });
+        app.directive('accordion', function () {
+            var directive;
+            directive = {
+                restrict: 'E',
+                templateUrl: 'accordion.html',
+                scope: {
+                    data: '='
+                },
+                link: function (scope, elem) {
+                    scope.hide = false;
+                    scope.icon = [];
+                    scope.toggle = function (index) {
+                        scope.hide = !scope.hide
+                        scope.icon[index] = !scope.icon[index];
+                    }
+                }
+            }
+            return directive;
+        });
+    </script>
+</head>
+<body ng-app="app" ng-controller="myController">
+<accordion ng-repeat="item in data" data="item"></accordion>
+</body>
+</html>

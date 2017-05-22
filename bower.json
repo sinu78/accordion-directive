@@ -1,0 +1,21 @@
+{
+  "name": "angular-js-components",
+  "description": "angular js project",
+  "main": "index.html",
+  "authors": [
+    "sachin kumar"
+  ],
+  "license": "ISC",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "^1.6.4",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}
